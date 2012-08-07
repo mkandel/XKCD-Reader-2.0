@@ -10,4 +10,8 @@
 
 @interface XKCDEntry : NSObject
 
+@property (nonatomic) NSNumber *id;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSURL *url;
+
 @end
