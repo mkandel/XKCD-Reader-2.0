@@ -8,6 +8,7 @@
 
 #import "XKCDEntry.h"
 
+//Private implementation stuff
 @interface XKCDEntry()
 @end
 

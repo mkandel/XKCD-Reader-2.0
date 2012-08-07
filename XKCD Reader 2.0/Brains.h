@@ -7,16 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "pcre.h"
-#import "libxml/HTMLParser.h"
-
-//@implementation Brains
-//
-//NSUrl *url;
-//
-//@end
 
 @interface Brains : NSObject
+
+// TODO: testing, remove this:
+@property (nonatomic) NSURL *base;
 
 - (NSArray *)getComics;
 - (NSURL *)getImageURL:(NSURL *)comic_url;
