@@ -10,6 +10,15 @@
 #import "pcre.h"
 #import "libxml/HTMLParser.h"
 
+//@implementation Brains
+//
+//NSUrl *url;
+//
+//@end
+
 @interface Brains : NSObject
+
+- (NSArray *)getComics;
+- (NSURL *)getImageURL:(NSURL *)comic_url;
 
 @end
