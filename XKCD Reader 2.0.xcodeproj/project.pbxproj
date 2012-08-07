@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4960E55A15D0DAD40015DE5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4960E55915D0DAD40015DE5C /* Cocoa.framework */; };
+		4960E56415D0DAD40015DE5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4960E56215D0DAD40015DE5C /* InfoPlist.strings */; };
+		4960E56615D0DAD40015DE5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960E56515D0DAD40015DE5C /* main.m */; };
+		4960E56A15D0DAD40015DE5C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4960E56815D0DAD40015DE5C /* Credits.rtf */; };
+		4960E56D15D0DAD40015DE5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960E56C15D0DAD40015DE5C /* AppDelegate.m */; };
+		4960E57015D0DAD40015DE5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4960E56E15D0DAD40015DE5C /* MainMenu.xib */; };
+		4960E57815D0DAD50015DE5C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4960E57715D0DAD50015DE5C /* SenTestingKit.framework */; };
+		4960E57915D0DAD50015DE5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4960E55915D0DAD40015DE5C /* Cocoa.framework */; };
+		4960E58115D0DAD50015DE5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4960E57F15D0DAD50015DE5C /* InfoPlist.strings */; };
+		4960E58415D0DAD50015DE5C /* XKCD_Reader_2_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960E58315D0DAD50015DE5C /* XKCD_Reader_2_0Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4960E57A15D0DAD50015DE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4960E54C15D0DAD40015DE5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4960E55415D0DAD40015DE5C;
+			remoteInfo = "XKCD Reader 2.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4960E55515D0DAD40015DE5C /* XKCD Reader 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XKCD Reader 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4960E55915D0DAD40015DE5C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4960E55C15D0DAD40015DE5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4960E55D15D0DAD40015DE5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4960E55E15D0DAD40015DE5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4960E56115D0DAD40015DE5C /* XKCD Reader 2.0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XKCD Reader 2.0-Info.plist"; sourceTree = "<group>"; };
+		4960E56315D0DAD40015DE5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4960E56515D0DAD40015DE5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4960E56715D0DAD40015DE5C /* XKCD Reader 2.0-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XKCD Reader 2.0-Prefix.pch"; sourceTree = "<group>"; };
+		4960E56915D0DAD40015DE5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4960E56B15D0DAD40015DE5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4960E56C15D0DAD40015DE5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4960E56F15D0DAD40015DE5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4960E57615D0DAD50015DE5C /* XKCD Reader 2.0Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XKCD Reader 2.0Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4960E57715D0DAD50015DE5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4960E57E15D0DAD50015DE5C /* XKCD Reader 2.0Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XKCD Reader 2.0Tests-Info.plist"; sourceTree = "<group>"; };
+		4960E58015D0DAD50015DE5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4960E58215D0DAD50015DE5C /* XKCD_Reader_2_0Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XKCD_Reader_2_0Tests.h; sourceTree = "<group>"; };
+		4960E58315D0DAD50015DE5C /* XKCD_Reader_2_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XKCD_Reader_2_0Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4960E55215D0DAD40015DE5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E55A15D0DAD40015DE5C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4960E57215D0DAD50015DE5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E57815D0DAD50015DE5C /* SenTestingKit.framework in Frameworks */,
+				4960E57915D0DAD50015DE5C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4960E54A15D0DAD40015DE5C = {
+			isa = PBXGroup;
+			children = (
+				4960E55F15D0DAD40015DE5C /* XKCD Reader 2.0 */,
+				4960E57C15D0DAD50015DE5C /* XKCD Reader 2.0Tests */,
+				4960E55815D0DAD40015DE5C /* Frameworks */,
+				4960E55615D0DAD40015DE5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4960E55615D0DAD40015DE5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4960E55515D0DAD40015DE5C /* XKCD Reader 2.0.app */,
+				4960E57615D0DAD50015DE5C /* XKCD Reader 2.0Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4960E55815D0DAD40015DE5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4960E55915D0DAD40015DE5C /* Cocoa.framework */,
+				4960E57715D0DAD50015DE5C /* SenTestingKit.framework */,
+				4960E55B15D0DAD40015DE5C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4960E55B15D0DAD40015DE5C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4960E55C15D0DAD40015DE5C /* AppKit.framework */,
+				4960E55D15D0DAD40015DE5C /* CoreData.framework */,
+				4960E55E15D0DAD40015DE5C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4960E55F15D0DAD40015DE5C /* XKCD Reader 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				4960E56B15D0DAD40015DE5C /* AppDelegate.h */,
+				4960E56C15D0DAD40015DE5C /* AppDelegate.m */,
+				4960E56E15D0DAD40015DE5C /* MainMenu.xib */,
+				4960E56015D0DAD40015DE5C /* Supporting Files */,
+			);
+			path = "XKCD Reader 2.0";
+			sourceTree = "<group>";
+		};
+		4960E56015D0DAD40015DE5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4960E56115D0DAD40015DE5C /* XKCD Reader 2.0-Info.plist */,
+				4960E56215D0DAD40015DE5C /* InfoPlist.strings */,
+				4960E56515D0DAD40015DE5C /* main.m */,
+				4960E56715D0DAD40015DE5C /* XKCD Reader 2.0-Prefix.pch */,
+				4960E56815D0DAD40015DE5C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4960E57C15D0DAD50015DE5C /* XKCD Reader 2.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4960E58215D0DAD50015DE5C /* XKCD_Reader_2_0Tests.h */,
+				4960E58315D0DAD50015DE5C /* XKCD_Reader_2_0Tests.m */,
+				4960E57D15D0DAD50015DE5C /* Supporting Files */,
+			);
+			path = "XKCD Reader 2.0Tests";
+			sourceTree = "<group>";
+		};
+		4960E57D15D0DAD50015DE5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4960E57E15D0DAD50015DE5C /* XKCD Reader 2.0Tests-Info.plist */,
+				4960E57F15D0DAD50015DE5C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4960E55415D0DAD40015DE5C /* XKCD Reader 2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4960E58715D0DAD50015DE5C /* Build configuration list for PBXNativeTarget "XKCD Reader 2.0" */;
+			buildPhases = (
+				4960E55115D0DAD40015DE5C /* Sources */,
+				4960E55215D0DAD40015DE5C /* Frameworks */,
+				4960E55315D0DAD40015DE5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XKCD Reader 2.0";
+			productName = "XKCD Reader 2.0";
+			productReference = 4960E55515D0DAD40015DE5C /* XKCD Reader 2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4960E57515D0DAD50015DE5C /* XKCD Reader 2.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4960E58A15D0DAD50015DE5C /* Build configuration list for PBXNativeTarget "XKCD Reader 2.0Tests" */;
+			buildPhases = (
+				4960E57115D0DAD50015DE5C /* Sources */,
+				4960E57215D0DAD50015DE5C /* Frameworks */,
+				4960E57315D0DAD50015DE5C /* Resources */,
+				4960E57415D0DAD50015DE5C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4960E57B15D0DAD50015DE5C /* PBXTargetDependency */,
+			);
+			name = "XKCD Reader 2.0Tests";
+			productName = "XKCD Reader 2.0Tests";
+			productReference = 4960E57615D0DAD50015DE5C /* XKCD Reader 2.0Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4960E54C15D0DAD40015DE5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = marc;
+			};
+			buildConfigurationList = 4960E54F15D0DAD40015DE5C /* Build configuration list for PBXProject "XKCD Reader 2.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4960E54A15D0DAD40015DE5C;
+			productRefGroup = 4960E55615D0DAD40015DE5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4960E55415D0DAD40015DE5C /* XKCD Reader 2.0 */,
+				4960E57515D0DAD50015DE5C /* XKCD Reader 2.0Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4960E55315D0DAD40015DE5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E56415D0DAD40015DE5C /* InfoPlist.strings in Resources */,
+				4960E56A15D0DAD40015DE5C /* Credits.rtf in Resources */,
+				4960E57015D0DAD40015DE5C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4960E57315D0DAD50015DE5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E58115D0DAD50015DE5C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4960E57415D0DAD50015DE5C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4960E55115D0DAD40015DE5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E56615D0DAD40015DE5C /* main.m in Sources */,
+				4960E56D15D0DAD40015DE5C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4960E57115D0DAD50015DE5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4960E58415D0DAD50015DE5C /* XKCD_Reader_2_0Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4960E57B15D0DAD50015DE5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4960E55415D0DAD40015DE5C /* XKCD Reader 2.0 */;
+			targetProxy = 4960E57A15D0DAD50015DE5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4960E56215D0DAD40015DE5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4960E56315D0DAD40015DE5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4960E56815D0DAD40015DE5C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4960E56915D0DAD40015DE5C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4960E56E15D0DAD40015DE5C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4960E56F15D0DAD40015DE5C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4960E57F15D0DAD50015DE5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4960E58015D0DAD50015DE5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4960E58515D0DAD50015DE5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4960E58615D0DAD50015DE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4960E58815D0DAD50015DE5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				INFOPLIST_FILE = "XKCD Reader 2.0/XKCD Reader 2.0-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4960E58915D0DAD50015DE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				INFOPLIST_FILE = "XKCD Reader 2.0/XKCD Reader 2.0-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4960E58B15D0DAD50015DE5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XKCD Reader 2.0.app/Contents/MacOS/XKCD Reader 2.0";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				INFOPLIST_FILE = "XKCD Reader 2.0Tests/XKCD Reader 2.0Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4960E58C15D0DAD50015DE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XKCD Reader 2.0.app/Contents/MacOS/XKCD Reader 2.0";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				INFOPLIST_FILE = "XKCD Reader 2.0Tests/XKCD Reader 2.0Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4960E54F15D0DAD40015DE5C /* Build configuration list for PBXProject "XKCD Reader 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4960E58515D0DAD50015DE5C /* Debug */,
+				4960E58615D0DAD50015DE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4960E58715D0DAD50015DE5C /* Build configuration list for PBXNativeTarget "XKCD Reader 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4960E58815D0DAD50015DE5C /* Debug */,
+				4960E58915D0DAD50015DE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4960E58A15D0DAD50015DE5C /* Build configuration list for PBXNativeTarget "XKCD Reader 2.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4960E58B15D0DAD50015DE5C /* Debug */,
+				4960E58C15D0DAD50015DE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4960E54C15D0DAD40015DE5C /* Project object */;
+}
