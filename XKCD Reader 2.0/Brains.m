@@ -9,19 +9,20 @@
 #import "Brains.h"
 #import "pcre.h"
 #import "libxml/HTMLParser.h"
+#import <WebKit/WebKit.h>
 
-#define MYDEBUG 0
+#define MYDEBUG 1
 
 // Private interface
 @interface Brains()
 
 // Private variables
-// TODO: testing, uncomment this:
-//@property (nonatomic) NSURL *base;
+@property (nonatomic) NSURL *base;
 @property (nonatomic,strong) NSArray *comics;
 
 // Private methods
 - (void) loadComics;
+- (NSURL *)getImageURL:(NSURL *)comic_url;
 
 @end
 
@@ -42,8 +43,10 @@
 }
 
 - (NSArray *)getComics{
-    NSURL *tmp = self.base;
-    NSLog(@"%@", tmp);
+    if ([self.comics count] < 1) {
+         [self loadComics];
+    }
+    
     return self.comics;
 }
 
@@ -53,11 +56,18 @@
 }
 
 - (void) loadComics{
+    if (MYDEBUG) {
+        NSLog(@"Entered loadComics");
+    }
+    
     // Build up a mutable array of the comics
-    NSMutableArray *temp;
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
     
     // Set self.comics to an NSArray version of the complete list
     self.comics = temp.copy;
+    if (MYDEBUG) {
+        NSLog(@"Exiting loadComics");
+    }
 }
 
 @end

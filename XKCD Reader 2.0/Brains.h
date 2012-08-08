@@ -10,10 +10,6 @@
 
 @interface Brains : NSObject
 
-// TODO: testing, remove this:
-@property (nonatomic) NSURL *base;
-
-- (NSArray *)getComics;
-- (NSURL *)getImageURL:(NSURL *)comic_url;
+- (NSArray *) getComics;
 
 @end

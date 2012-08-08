@@ -10,8 +10,9 @@
 #import <AppKit/AppKit.h>
 #import <Quartz/Quartz.h>
 #import "Brains.h"
+#import "XKCDEntry.h"
 
-#define MYDEBUG 1
+#define MYDEBUG 0
 
 // Private interface
 @interface AppDelegate()
@@ -39,14 +40,9 @@
 @synthesize isSpinning = _isSpinning;
 @synthesize xkcdImage  = _xkcdImage;
 
-- (NSProgressIndicator *) spinner{
-    if ( _spinner == nil ) _spinner = [[NSProgressIndicator alloc]init];
-    return _spinner;
-}
-
-- (NSImageView *) xkcdImage{
-    if ( _xkcdImage == nil ) _xkcdImage = [[NSImageView alloc]init];
-    return _xkcdImage;
+- (Brains *) brain{
+    if ( _brain == nil ) _brain = [[Brains alloc]init];
+    return _brain;
 }
 
 -(BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication{
@@ -64,12 +60,14 @@
     }
     
     // Insert code here to initialize your application
-    self.brain  = [[Brains alloc] init];
-    self.comics = [self.brain getComics];
-    [self.title setTitleWithMnemonic:@"Welcome to XKCD Reader 2!"];
     [self.spinner stopAnimation:nil];
     self.isSpinning = NO;
-    
+
+    [self toggleSpin];
+    self.comics = [self.brain getComics];
+    [self.title setTitleWithMnemonic:@"Welcome to XKCD Reader 2!"];
+    [self toggleSpin];
+
     NSURL *logo_url = [[NSURL alloc] initWithString:@"http://imgs.xkcd.com/s/9be30a7.png"];
     
     NSImage *logo_image = [[NSImage alloc] initWithContentsOfURL:logo_url];
@@ -80,9 +78,28 @@
     }
 }
 
+- (void) toggleSpin{
+    if (self.isSpinning == NO){
+        if (MYDEBUG) {
+            NSLog(@"Spin On!");
+        }
+        [self.spinner startAnimation:nil];
+        self.isSpinning = YES;
+    } else {
+        if (MYDEBUG) {
+            NSLog(@"Spin Off");
+        }
+        [self.spinner stopAnimation:nil];
+        self.isSpinning = NO;
+    }
+}
+
 - (IBAction)quitPress:(NSButton *)sender {
     if (MYDEBUG) {
         NSLog(@"Entered quitPress");
+    }
+    if (MYDEBUG) {
+        NSLog(@"Exiting quitPress");
     }
     exit(0);
 }
@@ -130,16 +147,6 @@
         NSLog(@"Exiting randPress");
     }
     return;
-}
-
-- (void) toggleSpin{
-    if (self.isSpinning == NO){
-        [self.spinner startAnimation:nil];
-        self.isSpinning = YES;
-    } else {
-        [self.spinner stopAnimation:nil];
-        self.isSpinning = NO;
-    }
 }
 
 @end
