@@ -12,7 +12,7 @@
 #import <WebKit/WebKit.h>
 #import "XKCDEntry.h"
 
-#define MYDEBUG 1
+#define MYDEBUG 0
 
 // Private interface
 @interface Brains()
@@ -71,7 +71,7 @@
         NSString *tmpUrl = [[NSString alloc] initWithFormat:@"%@/%@/%@.png",self.base,id,name];
         NSURL *url       = [[NSURL alloc] initWithString:tmpUrl];
         
-        XKCDEntry *entry = [XKCDEntry newWithId:id Name:name Url:url];
+        XKCDEntry *entry = [XKCDEntry newWithId:id Name:name comicUrl:url imageUrl:url];
         [temp addObject:entry];
     }
     

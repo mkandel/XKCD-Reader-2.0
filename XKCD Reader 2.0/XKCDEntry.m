@@ -15,9 +15,10 @@
 
 @implementation XKCDEntry
 
-@synthesize id   = _id;
-@synthesize myname = _myname;
-@synthesize url  = _url;
+@synthesize id       = _id;
+@synthesize myname   = _myname;
+@synthesize comicUrl = _comicUrl;
+@synthesize imageUrl = _imageUrl;
 
 // Lazy load these properties
 - (NSNumber *) id{
@@ -28,18 +29,27 @@
     if ( _myname == nil ) _myname = [[NSString alloc]init];
     return _myname;
 }
-- (NSURL *) url{
-    if ( _url == nil ) _url = [[NSURL alloc] init];
-    return _url;
+- (NSURL *) comicUrl{
+    if ( _comicUrl == nil ) _comicUrl = [[NSURL alloc] init];
+    return _comicUrl;
+}
+- (NSURL *) imageUrl{
+    if ( _imageUrl == nil ) _imageUrl = [[NSURL alloc] init];
+    return _imageUrl;
 }
 
 // Build a new entry and return it
-+ (XKCDEntry *) newWithId:(NSNumber *)id Name:(NSString *)name Url:(NSURL *)url{
++ (XKCDEntry *) newWithId:(NSNumber *)id
+                     Name:(NSString *)name
+                 comicUrl:(NSURL *)comicUrl
+                 imageUrl:(NSURL *)imageUrl
+{
     XKCDEntry *ret = [[XKCDEntry alloc] init];
     //ret = [super init];
-    ret.id   = id;
-    ret.myname = name;
-    ret.url  = url;
+    ret.id       = id;
+    ret.myname   = name;
+    ret.comicUrl = comicUrl;
+    ret.imageUrl = imageUrl;
     return ret;
 }
 

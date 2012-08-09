@@ -12,8 +12,9 @@
 
 @property (nonatomic) NSNumber *id;
 @property (nonatomic) NSString *myname;
-@property (nonatomic) NSURL *url;
+@property (nonatomic) NSURL *comicUrl;
+@property (nonatomic) NSURL *imageUrl;
 
-+ (XKCDEntry *) newWithId:(NSNumber *)id Name:(NSString *)name Url:(NSURL *)url;
++ (XKCDEntry *) newWithId:(NSNumber *)id Name:(NSString *)name comicUrl:(NSURL *)comicUrl imageUrl:(NSURL *)imageUrl;
 
 @end
