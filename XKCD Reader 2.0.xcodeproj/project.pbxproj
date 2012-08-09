@@ -12,7 +12,8 @@
 		490ED5F615D35E8D004132BB /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 490ED5F515D35E8D004132BB /* README.rtf */; };
 		490ED60115D36A42004132BB /* xkcd_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 490ED5FF15D36A42004132BB /* xkcd_512x512.png */; };
 		490ED60215D36A43004132BB /* xkcd.png in Resources */ = {isa = PBXBuildFile; fileRef = 490ED60015D36A42004132BB /* xkcd.png */; };
-		490ED60415D374EC004132BB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 490ED60315D374EC004132BB /* LICENSE */; };
+		493E95AD15D391C9001FDE0C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 493E95AC15D391C9001FDE0C /* LICENSE */; };
+		493E95B115D3930B001FDE0C /* README in Resources */ = {isa = PBXBuildFile; fileRef = 493E95B015D3930B001FDE0C /* README */; };
 		4960E55A15D0DAD40015DE5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4960E55915D0DAD40015DE5C /* Cocoa.framework */; };
 		4960E56415D0DAD40015DE5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4960E56215D0DAD40015DE5C /* InfoPlist.strings */; };
 		4960E56615D0DAD40015DE5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960E56515D0DAD40015DE5C /* main.m */; };
@@ -43,7 +44,8 @@
 		490ED5F515D35E8D004132BB /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 		490ED5FF15D36A42004132BB /* xkcd_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xkcd_512x512.png; sourceTree = "<group>"; };
 		490ED60015D36A42004132BB /* xkcd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xkcd.png; sourceTree = "<group>"; };
-		490ED60315D374EC004132BB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		493E95AC15D391C9001FDE0C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		493E95B015D3930B001FDE0C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4960E55515D0DAD40015DE5C /* XKCD Reader 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XKCD Reader 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4960E55915D0DAD40015DE5C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4960E55C15D0DAD40015DE5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +145,8 @@
 		4960E56015D0DAD40015DE5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				493E95B015D3930B001FDE0C /* README */,
+				493E95AC15D391C9001FDE0C /* LICENSE */,
 				490ED5FF15D36A42004132BB /* xkcd_512x512.png */,
 				490ED60015D36A42004132BB /* xkcd.png */,
 				490ED5F515D35E8D004132BB /* README.rtf */,
@@ -151,7 +155,6 @@
 				4960E56515D0DAD40015DE5C /* main.m */,
 				4960E56715D0DAD40015DE5C /* XKCD Reader 2.0-Prefix.pch */,
 				4960E56815D0DAD40015DE5C /* Credits.rtf */,
-				490ED60315D374EC004132BB /* LICENSE */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,7 +255,8 @@
 				490ED5F615D35E8D004132BB /* README.rtf in Resources */,
 				490ED60115D36A42004132BB /* xkcd_512x512.png in Resources */,
 				490ED60215D36A43004132BB /* xkcd.png in Resources */,
-				490ED60415D374EC004132BB /* LICENSE in Resources */,
+				493E95AD15D391C9001FDE0C /* LICENSE in Resources */,
+				493E95B115D3930B001FDE0C /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

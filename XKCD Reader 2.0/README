@@ -1,0 +1,12 @@
+TODO:
+    1.  Download live data, build the array, NOTE: look into needing to reverse the list returned by getComics
+    2.  Hook the array to the table
+    3.  Download images on demand
+    4.  Hook ImageView to array
+    5.  Rejoice, the hard work is done :-)
+    6.  Code Random, Next, Prev logic - DONE
+
+Enhancements:
+    •   Save image locally?
+    •   Print image?
+    •   Color image??

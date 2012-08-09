@@ -1,5 +1,8 @@
 # Xcode
 build/*
+*.sav
+*.bak
+*.swp
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -16,5 +19,6 @@ profile
 DerivedData/
 .DS_Store
 XKCD Reader 2.0/Model.xcdatamodeld/
-XKCD Reader 2.0.xcodeproj/project.xcworkspace/
-XKCD Reader 2.0.xcodeproj/xcuserdata/
+#XKCD Reader 2.0.xcodeproj/project.xcworkspace/
+XKCD Reader 2.0.xcodeproj/xcuserdata/*
+#XKCD Reader 2.0.xcodeproj/project.pbxproj
