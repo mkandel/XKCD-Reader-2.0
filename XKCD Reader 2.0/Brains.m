@@ -10,6 +10,7 @@
 #import "pcre.h"
 #import "libxml/HTMLParser.h"
 #import <WebKit/WebKit.h>
+#import "XKCDEntry.h"
 
 #define MYDEBUG 1
 
@@ -46,7 +47,7 @@
     if ([self.comics count] < 1) {
          [self loadComics];
     }
-    
+
     return self.comics;
 }
 
@@ -62,6 +63,17 @@
     
     // Build up a mutable array of the comics
     NSMutableArray *temp = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 50 ; i++) {
+        // Add a dummy entry for testing:
+        NSNumber *id     = [[NSNumber alloc] initWithInt:i];
+        NSString *name   = [[NSString alloc] initWithFormat:@"Comic-#%@", id];
+        NSString *tmpUrl = [[NSString alloc] initWithFormat:@"%@/%@/%@.png",self.base,id,name];
+        NSURL *url       = [[NSURL alloc] initWithString:tmpUrl];
+        
+        XKCDEntry *entry = [XKCDEntry newWithId:id Name:name Url:url];
+        [temp addObject:entry];
+    }
     
     // Set self.comics to an NSArray version of the complete list
     self.comics = temp.copy;

@@ -12,7 +12,7 @@
 #import "Brains.h"
 #import "XKCDEntry.h"
 
-#define MYDEBUG 0
+#define MYDEBUG 1
 
 // Private interface
 @interface AppDelegate()
@@ -50,6 +50,10 @@
         NSLog(@"Entered applicationShouldTerminateAfterLastWindowClosed");
     }
     
+    if (MYDEBUG) {
+        NSLog(@"Exiting applicationShouldTerminateAfterLastWindowClosed");
+    }
+    
     return YES;
 }
 
@@ -57,21 +61,33 @@
 {
     if (MYDEBUG) {
         NSLog(@"Entered applicationDidFinishLaunching");
+        if ([self conformsToProtocol:@protocol(NSTableViewDataSource)]) {
+            NSLog(@"Is a NSTableViewDataSource");
+        } else {
+            NSLog(@"Is NOT a NSTableViewDataSource");
+        }
     }
     
     // Insert code here to initialize your application
     [self.spinner stopAnimation:nil];
     self.isSpinning = NO;
-
+    
     [self toggleSpin];
     self.comics = [self.brain getComics];
     [self.title setTitleWithMnemonic:@"Welcome to XKCD Reader 2!"];
     [self toggleSpin];
-
+    
+    if (MYDEBUG > 1){
+        for (int i = 0; i < [self.comics count]; i++) {
+            NSLog(@"Got item: '%@' - '%@' - '%@'", [self.comics[i] id],[self.comics[i] myname],[self.comics[i] url]);
+        }
+    }
     NSURL *logo_url = [[NSURL alloc] initWithString:@"http://imgs.xkcd.com/s/9be30a7.png"];
     
     NSImage *logo_image = [[NSImage alloc] initWithContentsOfURL:logo_url];
     [self.xkcdImage setImage:logo_image];
+    
+    [self.table reloadData];
     
     if (MYDEBUG) {
         NSLog(@"Exiting applicationDidFinishLaunching");
@@ -132,6 +148,7 @@
     if (MYDEBUG) {
         NSLog(@"Entered randPress");
     }
+    
     if (MYDEBUG) {
         NSLog(@"Exiting randPress");
     }
@@ -147,6 +164,46 @@
         NSLog(@"Exiting randPress");
     }
     return;
+}
+
+// Datasource implementation
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)table {
+    if (MYDEBUG) {
+        NSLog(@"Entered numberOfRowsInTableView:");
+    }
+    return [self.comics count];
+}
+
+//- (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray *)oldDescriptors {
+////    NSArray *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"Name"
+////                                                            ascending:YES
+////                                                             selector:@selector(compare:)];
+////    
+////    [self.comics sortedArrayUsingDescriptors:sortDescriptor];
+//    
+//    [tableView reloadData];
+//}
+
+- (id)tableView:(NSTableView *)table objectValueForTableColumn:(NSTableColumn *)col row:(NSInteger)row {
+    if (MYDEBUG) {
+        NSLog(@"Entered objectValueForTableColumn:%@row:%ld",col  ,row);
+    }
+    // the return value is typed as (id) because it will return a string in all cases with the exception of the
+    id returnValue = nil;
+    
+    NSString *columnIdentifer = [col identifier];
+    NSLog(@"** Got item: '%@' **", columnIdentifer);
+    XKCDEntry *entry = [self.comics objectAtIndex:row];
+    
+    //    NSLog(@"** Got item: '%@' - '%@' - '%@' **", [entry id],[entry myname],[entry url]);
+    
+    if ([columnIdentifer isEqualToString:@"Name"]) {
+        returnValue = entry.myname;
+    } else {
+        returnValue = entry.id;
+    }
+    
+    return returnValue;
 }
 
 @end

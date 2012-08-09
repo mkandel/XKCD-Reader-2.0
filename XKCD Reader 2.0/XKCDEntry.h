@@ -11,7 +11,9 @@
 @interface XKCDEntry : NSObject
 
 @property (nonatomic) NSNumber *id;
-@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *myname;
 @property (nonatomic) NSURL *url;
+
++ (XKCDEntry *) newWithId:(NSNumber *)id Name:(NSString *)name Url:(NSURL *)url;
 
 @end
