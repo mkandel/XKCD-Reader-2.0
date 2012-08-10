@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317297BF15D4826300669FC9 /* libpcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 317297BE15D4826300669FC9 /* libpcre.dylib */; };
+		317297C115D4827C00669FC9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 317297C015D4827B00669FC9 /* libxml2.dylib */; };
 		490ED5F215D35E83004132BB /* Brains.m in Sources */ = {isa = PBXBuildFile; fileRef = 490ED5EF15D35E83004132BB /* Brains.m */; };
 		490ED5F315D35E83004132BB /* XKCDEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 490ED5F115D35E83004132BB /* XKCDEntry.m */; };
 		490ED5F615D35E8D004132BB /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 490ED5F515D35E8D004132BB /* README.rtf */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		317297BE15D4826300669FC9 /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = usr/lib/libpcre.dylib; sourceTree = SDKROOT; };
+		317297C015D4827B00669FC9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		490ED5EE15D35E83004132BB /* Brains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brains.h; sourceTree = "<group>"; };
 		490ED5EF15D35E83004132BB /* Brains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brains.m; sourceTree = "<group>"; };
 		490ED5F015D35E83004132BB /* XKCDEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCDEntry.h; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317297C115D4827C00669FC9 /* libxml2.dylib in Frameworks */,
+				317297BF15D4826300669FC9 /* libpcre.dylib in Frameworks */,
 				4960E55A15D0DAD40015DE5C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +97,8 @@
 		4960E54A15D0DAD40015DE5C = {
 			isa = PBXGroup;
 			children = (
+				317297C015D4827B00669FC9 /* libxml2.dylib */,
+				317297BE15D4826300669FC9 /* libpcre.dylib */,
 				4960E55F15D0DAD40015DE5C /* XKCD Reader 2.0 */,
 				4960E57C15D0DAD50015DE5C /* XKCD Reader 2.0Tests */,
 				4960E55815D0DAD40015DE5C /* Frameworks */,
@@ -416,11 +424,18 @@
 		4960E58815D0DAD50015DE5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/,
+					/usr/include/libxml2/,
+				);
 				INFOPLIST_FILE = "XKCD Reader 2.0/XKCD Reader 2.0-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,11 +443,18 @@
 		4960E58915D0DAD50015DE5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XKCD Reader 2.0/XKCD Reader 2.0-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/,
+					/usr/include/libxml2/,
+				);
 				INFOPLIST_FILE = "XKCD Reader 2.0/XKCD Reader 2.0-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/include;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

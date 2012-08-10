@@ -30,8 +30,6 @@
 @property (weak) IBOutlet NSSearchField *filter;
 @property (weak) IBOutlet NSImageView *logo;
 
-@property (nonatomic) BOOL seeded;
-
 - (void) toggleSpin;
 - (void)selectTableRow:(int)row;
 
@@ -48,6 +46,7 @@
 @synthesize xkcdImage  = _xkcdImage;
 @synthesize filter     = _filter;
 @synthesize logo       = _logo;
+@synthesize window     = _window;
 
 - (Brains *) brain{
     if ( _brain == nil ) _brain = [[Brains alloc]init];
@@ -83,8 +82,6 @@ NSInteger ONE = 1;
     [self.spinner stopAnimation:nil];
     self.isSpinning = NO;
     
-    self.seeded = NO;
-    
     NSURL *logoUrl = [[NSURL alloc] initWithString:@"http://imgs.xkcd.com/s/9be30a7.png"];
     NSImage *logoImage = [[NSImage alloc] initWithContentsOfURL:logoUrl];
     [self.logo setImage:logoImage];
@@ -97,7 +94,10 @@ NSInteger ONE = 1;
     
     if (MYDEBUG > 1){
         for (int i = 0; i < [self.comics count]; i++) {
-            NSLog(@"Got item: '%@' - '%@' - '%@'", [self.comics[i] id],[self.comics[i] myname],[self.comics[i] url]);
+            XKCDEntry *entry = [self.comics objectAtIndex:i];
+            //NSLog(@"Got item: '%@' - '%@' - '%@'", [self.comics[i] id],[self.comics[i] myname],[self.comics[i] url]);
+
+            NSLog(@"Got item: '%@' - '%@' - '%@' - '%@'",[entry id],[entry myname],[entry comicUrl],[entry imageUrl]);
         }
     }
     NSURL *logo_url = [[NSURL alloc] initWithString:@"http://imgs.xkcd.com/s/9be30a7.png"];
@@ -194,15 +194,8 @@ NSInteger ONE = 1;
     }
     
     [self toggleSpin];
-
-    // Only seed once
-    if (self.seeded == NO) {
-        unsigned int mytime = (unsigned int) time(NULL);
-        srand(mytime);
-        self.seeded = YES;
-    }
     
-    int randomElem = rand() % ( (int)[self.comics count] - 1 );
+    int randomElem = arc4random() % ( (int)[self.comics count] - 1 );
     
     XKCDEntry *entry = [self.comics objectAtIndex:randomElem];
     
