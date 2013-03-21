@@ -14,7 +14,7 @@
 #import "Brains.h"
 #import "XKCDEntry.h"
 
-#define MYDEBUG 0
+#define MYDEBUG 1
 
 // Private interface
 @interface AppDelegate()
